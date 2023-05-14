@@ -1,0 +1,57 @@
+'use client'
+import { useState } from 'react'
+import { TitleText } from './CustomTexts'
+import Skill from './Skill'
+import { techSkills, softSkills } from '../constants'
+
+export default function Skills() {
+    const [activeTab, setActiveTab] = useState("Soft");
+    const [activeSkills, setActiveSkills] = useState("Soft");
+    const activeBgColor = "text-[#EC994B]"
+    const setBg = (active: string) => (activeTab === active ? activeBgColor : "bg-transparent");
+
+    const tabs = (
+        <section className='flex gap-4'>
+            {["Soft", "Tech"].map((tab) => (
+                <button
+                    key={tab}
+                    type='button'
+                    className={`border-2 rounded-2xl px-1 py-2 w-1/2 lg:w-1/6 text-center border-[#555297] font-semibold text-2xl ${setBg(tab)}`}
+                    onClick={() => {
+                        setActiveTab(tab)
+                        setActiveSkills(tab)
+                    }}
+                >
+                    {tab} Skills
+                </button>
+            ))}
+        </section>
+    );
+
+    return (
+        <div id='Skills' className="mt-24 lg:mt-0 px-8">
+            <TitleText title='Skills' textStyle='text-center' />
+            <div className=' w-2/3 mx-auto my-4'>
+
+                {tabs}
+
+                {activeSkills === "Soft" ?
+                    <div className="flex flex-wrap w-full mx-auto my-8 gap-4 justify-between">
+                        {softSkills.map((skill, index) => {
+                            return (
+                                <Skill key={index} value={skill} />
+                            )
+                        })}
+                    </div> :
+                    <div className="flex flex-wrap w-full mx-auto my-8 gap-4 justify-between">
+                        {techSkills.map((skill, index) => {
+                            return (
+                                <Skill key={index} value={skill} />
+                            )
+                        })}
+                    </div>
+                }
+            </div>
+        </div>
+    )
+}
