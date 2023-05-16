@@ -67,7 +67,7 @@ export const projects: project[] = [
     },
     {
         title: "CLI Games",
-        gitRepoText: "Check out git repository",
+        gitRepoText: "Check out git repositories",
         gitRepoLink: "https://github.com/SheikhXAdil",
         siteText: "View on npm",
         siteLink: "https://www.npmjs.com/~sheikhxadil",
