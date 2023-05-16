@@ -28,8 +28,8 @@ export default function Socials() {
         <ul className='flex flex-col gap-2'>
             {socials.map((social, index) => {
                 return (
-                    <Link target="_blank" href={social.link}>
-                        <li key={index} className='my-2 w-8 md:w-12 h-8 md:h-12 border-2 group border-[#EC994B] hover:bg-[#EC994B]  cursor-pointer rounded-full flex justify-center items-center'>
+                    <Link key={index} target="_blank" href={social.link}>
+                        <li className='my-2 w-8 md:w-12 h-8 md:h-12 border-2 group border-[#EC994B] hover:bg-[#EC994B]  cursor-pointer rounded-full flex justify-center items-center'>
                             <FontAwesomeIcon icon={social.icon} className='w-4 md:w-9h-10 h-4 md:h-11 group-hover:text-[#292750] text-[#EC994B] hover:bg-[#EC994B]' />
                         </li>
                     </Link>

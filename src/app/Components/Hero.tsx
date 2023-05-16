@@ -32,7 +32,7 @@ export default function Hero() {
                         <ul className='flex flex-wrap w-full mx-auto my-4 gap-4'>
                             {buttons.map((button, index) => {
                                 return (
-                                    <li><a href={button.link}><HeroButtons value={button.text} key={index} styles='cursor-pointer' /></a></li>
+                                    <li key={index} ><a href={button.link}><HeroButtons value={button.text} key={index} styles='cursor-pointer' /></a></li>
                                 )
                             })}
                         </ul>
