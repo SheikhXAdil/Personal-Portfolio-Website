@@ -29,7 +29,7 @@ export default function Skills() {
     );
 
     return (
-        <div id='Skills' className="mt-24 lg:mt-0 px-8">
+        <div id='Skills' className="mt-60 xs:mt-32 sm:mt-10 lg:mt-0 px-8">
             <TitleText title='Skills' textStyle='text-center' />
             <div className=' w-2/3 mx-auto my-4'>
 

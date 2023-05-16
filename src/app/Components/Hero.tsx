@@ -1,35 +1,42 @@
 import React from 'react'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { TypingText } from './CustomTexts'
+import HeroButtons from './HeroButtons'
 
 
 export default function Hero() {
-    const socials = [faGithub, faLinkedin, faTwitter, faEnvelope]
+    const buttons = [
+        {
+            text: "Hire Me",
+            link: "#Contact"
+        },
+        {
+            text: "Download CV",
+            link: "#Contact"
+        }
+    ]
 
     return (
-        <section className='mt-4 lg:mt-10 flex flex-col lg:flex-row justify-evenly lg:justify-between'>
+        <section className='mt-12 lg:mt-20 flex flex-col lg:flex-row justify-evenly lg:justify-between'>
             <div className='basis-2/3 my-auto'>
                 <div className='pl-8 py-8'>
-                    <p className='text-md lg:text-xl font-semibold'>Hello It's me</p>
+                    <p className='text-md lg:text-xl font-semibold'>Hi It&apos;s me</p>
                     <h1 className='text-5xl lg:text-6xl mt-2 font-bold'>Muhammad Adil Nadeem</h1>
                 </div>
                 <div className='px-8'>
 
-                    <h2 className='text-2xl md:text-3xl font-bold'>And I'm a <TypingText title='Full Stack NextJs Developer' textStyle='text-[#EC994B]' /></h2>
-                    <p className='w-full md:w-3/4 mt-4'>My goal is to create beautiful and functional websites that exceed your expectations. With a deep understanding of the latest technologies and trends, I can help you achieve your goals and stand out from the competition. Let's collaborate on your next project - <a href="#Contact" className='text-[#EC994B]'>contact me</a> today to get started.</p>
+                    <h2 className='text-2xl md:text-3xl font-bold'>And I&apos;m a <TypingText title='Full Stack NextJs Developer' textStyle='text-[#EC994B]' /></h2>
+                    <p className='w-full md:w-3/4 mt-4'>My goal is to create beautiful and functional websites that exceed your expectations. With a deep understanding of the latest technologies and trends, I can help you achieve your goals and stand out from the competition. Let&apos;s collaborate on your next project - contact me today to get started.</p>
 
-                    <ul className='flex mt-4 gap-4'>
-                        {socials.map((social) => {
-                            return (
-                                <li className='my-2 w-12 h-12 border-2 group border-[#EC994B] hover:bg-[#EC994B]  cursor-pointer rounded-full flex justify-center items-center'>
-                                    <FontAwesomeIcon icon={social} className='w-6 h-6 group-hover:text-[#292750] text-[#EC994B] hover:bg-[#EC994B]' />
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    <div className=''>
+                        <ul className='flex flex-wrap w-full mx-auto my-4 gap-4'>
+                            {buttons.map((button, index) => {
+                                return (
+                                    <li><a href={button.link}><HeroButtons value={button.text} key={index} styles='cursor-pointer' /></a></li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div className='lg:pl-0 mt-8 mx-auto basis-1/3'>

@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Eudoxus Sans", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -17,6 +16,28 @@
 
 body {
     background-color: #15133c;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: rgb(255, 164, 60) #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #38356e;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ec994b;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
 }
 
 .skill-gradient {
