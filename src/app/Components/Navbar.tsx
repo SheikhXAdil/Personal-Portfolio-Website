@@ -14,7 +14,7 @@ export default function Navbar() {
     return (
         <div className='fixed top-0 left-0 w-full mb-60 flex flex-col md:flex-row justify-between bg-[#15133c] z-20'>
             <div className="flex justify-between">
-                <div className="mx-8 my-4">
+                <div className="mx-2 sm:mx-8 my-4">
                     <Link href="/" className="text-xl md:text-2xl font-bold focus:outline-none">Muhammad Adil Nadeem</Link>
                 </div>
                 <button className="px-2 md:px-6 block md:hidden active:outline-none focus:outline-none" onClick={handleNavbar}>
