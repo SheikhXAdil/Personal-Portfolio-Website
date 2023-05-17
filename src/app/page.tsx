@@ -11,7 +11,7 @@ import Socials from "./Components/Socials";
 export default function Home() {
   return (
     <main>
-      <section className="fixed top-1/3 right-4">
+      <section className="fixed top-1/4 right-4">
         <Socials />
       </section>
       <section className="flex flex-col gap-4 md:gap-10 my-4 md:my-8 lg:mx-16 lg:px-8">

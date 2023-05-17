@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
@@ -21,6 +21,10 @@ export default function Socials() {
         {
             icon: faEnvelope,
             link: "mailto:adilnadeemedu@gmail.com"
+        },
+        {
+            icon: faWhatsapp,
+            link: "https://api.whatsapp.com/send?phone=923215526659"
         },
     ]
 

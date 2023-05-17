@@ -17,7 +17,7 @@ export default function Navbar() {
                 <div className="mx-8 my-4">
                     <h2 className="text-xl md:text-2xl font-bold">Muhammad Adil Nadeem</h2>
                 </div>
-                <button className="px-2 md:px-6 block md:hidden" onClick={handleNavbar}>
+                <button className="px-2 md:px-6 block md:hidden active:outline-none focus:outline-none" onClick={handleNavbar}>
                     <Image src={"/menu.svg"} alt="menu" width={32} height={32} />
                 </button>
             </div>
