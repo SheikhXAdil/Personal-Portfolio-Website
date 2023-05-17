@@ -11,7 +11,7 @@ export default function Skills() {
     const setBg = (active: string) => (activeTab === active ? activeBgColor : "bg-transparent");
 
     const tabs = (
-        <section className='flex gap-4'>
+        <div className='flex gap-4'>
             {["Soft", "Tech"].map((tab) => (
                 <button
                     key={tab}
@@ -25,33 +25,35 @@ export default function Skills() {
                     {tab} Skills
                 </button>
             ))}
-        </section>
+        </div>
     );
 
     return (
-        <div id='Skills' className="mt-8 px-8">
-            <TitleText title='Skills' textStyle='text-center' />
-            <div className=' w-2/3 mx-auto my-4'>
+        <section id='Skills'>
+            <div className="mt-8 px-8">
+                <TitleText title='Skills' textStyle='text-center' />
+                <div className=' w-2/3 mx-auto my-4'>
 
-                {tabs}
+                    {tabs}
 
-                {activeSkills === "Soft" ?
-                    <div className="flex flex-wrap w-full mx-auto my-8 gap-4 justify-between">
-                        {softSkills.map((skill, index) => {
-                            return (
-                                <Skill key={index} value={skill} />
-                            )
-                        })}
-                    </div> :
-                    <div className="flex flex-wrap w-full mx-auto my-8 gap-4 justify-between">
-                        {techSkills.map((skill, index) => {
-                            return (
-                                <Skill key={index} value={skill} />
-                            )
-                        })}
-                    </div>
-                }
+                    {activeSkills === "Soft" ?
+                        <div className="flex flex-wrap w-full mx-auto my-8 gap-4 justify-between">
+                            {softSkills.map((skill, index) => {
+                                return (
+                                    <Skill key={index} value={skill} />
+                                )
+                            })}
+                        </div> :
+                        <div className="flex flex-wrap w-full mx-auto my-8 gap-4 justify-between">
+                            {techSkills.map((skill, index) => {
+                                return (
+                                    <Skill key={index} value={skill} />
+                                )
+                            })}
+                        </div>
+                    }
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
