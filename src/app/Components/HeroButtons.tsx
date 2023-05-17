@@ -18,7 +18,7 @@ export default function HeroButtons({ value, styles }: { value: string, styles?:
 
     return (
         <div id={`${value}`} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className={`${activeGradient} flex items-center justify-center w-full border-2 rounded-2xl border-[#555297] p-3 text-[#fdfaed] hover:border-[#EC994B] ${styles ? styles : ""}`}>
-            <div className={`rounded-2xl text-center font-semibold  text-lg`}>
+            <div className={`rounded-2xl text-center font-semibold text-base md:text-lg`}>
                 {value}
             </div>
         </div>

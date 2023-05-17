@@ -9,7 +9,7 @@ export default function Project({ project }: { project: project }) {
     return (
         <div className='w-full lg:w-2/5 pb-4 border-2 border-[#555297] bg-[#181730]'>
             <div className='flex flex-col'>
-                <div className='w-100 h-56 relative'>
+                <div className='aspect-video relative'>
                     <Image src={project.img} alt={project.title} fill className='object-fit' />
                 </div>
                 <div className='mt-6 w-4/5 mx-auto'>
