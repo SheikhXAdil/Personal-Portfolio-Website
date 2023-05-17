@@ -17,7 +17,7 @@ export default function Project({ project }: { project: project }) {
                     <p className='text-[#fffbf0] text-lg'>{project.desc}</p>
                     <div className='flex flex-col mt-8'>
                         <Link target='_blank' href={project.siteLink} className='text-[#EC994B] text-lg  cursor-pointer hover:text-[#a39ef0]'>{project.siteText} <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='h-3 w-3 inline' /></Link>
-                        <Link target='_blank' href={project.gitRepoLink} className='text-[#EC994B] text-lg cursor-pointer hover:text-[#a39ef0]'>{project.gitRepoText} <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='h-3 w-3 inline' /></Link>
+                        <Link target='_blank' href={project.gitRepoLink ? project.gitRepoLink : ""} className='text-[#EC994B] text-lg cursor-pointer hover:text-[#a39ef0]'>{project.gitRepoText ? project.gitRepoText : ""} <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={`h-3 w-3 inline ${project.gitRepoText ? "" : "hidden"}`} /></Link>
                     </div>
                 </div>
             </div>

@@ -20,8 +20,8 @@ export const softSkills = [
 
 export type project = {
     title: string,
-    gitRepoText: string,
-    gitRepoLink: string,
+    gitRepoText?: string,
+    gitRepoLink?: string,
     siteText: string,
     siteLink: string,
     img: string,
@@ -67,8 +67,6 @@ export const projects: project[] = [
     },
     {
         title: "CLI Games",
-        gitRepoText: "Check out git repositories",
-        gitRepoLink: "https://github.com/SheikhXAdil",
         siteText: "View on npm",
         siteLink: "https://www.npmjs.com/~sheikhxadil",
         img: "/cli.gif",
