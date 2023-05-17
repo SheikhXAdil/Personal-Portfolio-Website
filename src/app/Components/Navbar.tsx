@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link";
 
 
 export default function Navbar() {
@@ -14,7 +15,7 @@ export default function Navbar() {
         <div className='fixed top-0 left-0 w-full mb-60 flex flex-col md:flex-row justify-between bg-[#15133c] z-20'>
             <div className="flex justify-between">
                 <div className="mx-8 my-4">
-                    <a href="/" className="text-xl md:text-2xl font-bold">Muhammad Adil Nadeem</a>
+                    <Link href="/" className="text-xl md:text-2xl font-bold">Muhammad Adil Nadeem</Link>
                 </div>
                 <button className="px-2 md:px-6 block md:hidden active:outline-none focus:outline-none" onClick={handleNavbar}>
                     <Image src={"/menu.svg"} alt="menu" width={32} height={32} />
