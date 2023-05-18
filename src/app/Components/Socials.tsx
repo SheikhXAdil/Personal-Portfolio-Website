@@ -33,8 +33,8 @@ export default function Socials() {
             {socials.map((social, index) => {
                 return (
                     <Link key={index} target="_blank" href={social.link}>
-                        <li className='my-2 w-8 md:w-12 h-8 md:h-12 border-2 group border-[#EC994B] hover:bg-[#EC994B]  cursor-pointer rounded-full flex justify-center items-center'>
-                            <FontAwesomeIcon icon={social.icon} className='w-4 md:w-9h-10 h-4 md:h-11 group-hover:text-[#292750] text-[#EC994B] hover:bg-[#EC994B]' />
+                        <li className='my-2 w-6 sm:w-8 h-6 sm:h-8 md:w-12 md:h-12 border-2 group border-[#EC994B] hover:bg-[#EC994B]  cursor-pointer rounded-full flex justify-center items-center'>
+                            <FontAwesomeIcon icon={social.icon} className='w-3 sm:w-4 h-3 sm:h-4 md:w-6 md:h-6 group-hover:text-[#292750] text-[#EC994B] hover:bg-[#EC994B]' />
                         </li>
                     </Link>
                 )

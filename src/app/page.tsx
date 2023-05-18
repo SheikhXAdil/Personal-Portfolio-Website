@@ -11,16 +11,16 @@ import Socials from "./Components/Socials";
 export default function Home() {
   return (
     <main>
-      <section className="fixed top-1/4 right-4">
-        <Socials />
-      </section>
-      <section className="flex flex-col gap-4 md:gap-10 my-4 md:my-8 lg:mx-16 lg:px-8">
+      <section className="container w-11/12 lg:w-2/3 mx-auto flex flex-col gap-4 md:gap-10 my-4 md:my-8">
         <Navbar />
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Contact />
+      </section>
+      <section className="fixed top-1/4 right-2 md:right-4">
+        <Socials />
       </section>
       <section className="fixed bottom-4 right-4">
         <BackToTop />

@@ -32,7 +32,7 @@ export default function Skills() {
         <section id='Skills'>
             <div className="mt-8 px-8">
                 <TitleText title='Skills' textStyle='text-center' />
-                <div className=' w-2/3 mx-auto my-4'>
+                <div className='my-4'>
 
                     {tabs}
 
