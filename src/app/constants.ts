@@ -5,7 +5,7 @@ export const techSkills = [
     "NextJs",
     "ReactJs",
     "SQL",
-    "API Development",
+    "API Integration",
 ]
 
 export const softSkills = [
