@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { project } from '../constants'
+import { project } from '../../../utils/constants'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'

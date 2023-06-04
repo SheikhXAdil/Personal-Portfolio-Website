@@ -1,6 +1,6 @@
 import React from 'react'
 import { TitleText } from './CustomTexts'
-import { projects } from '../constants'
+import { projects } from '../../../utils/constants'
 import Project from './Project'
 
 

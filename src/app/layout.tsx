@@ -1,4 +1,6 @@
 import './globals.css'
+import Footer from "./Components/Footer";
+
 
 export const metadata = {
   title: 'Muhammad Adil Nadeem',
@@ -10,9 +12,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={'dark bg-[#15133c] text-[#F1EEE9]'}>
+        <main className='container w-11/12 lg:w-2/3 mx-auto flex flex-col gap-4 md:gap-10 my-4 md:my-8'>
+          {children}
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </body>
     </html>
   )
 }
