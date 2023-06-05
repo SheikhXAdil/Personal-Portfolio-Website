@@ -16,7 +16,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={'dark bg-[#15133c] text-[#F1EEE9]'}>
+      <body className={'dark bg-bgPrimary text-fontPrimary'}>
         <main className='container w-11/12 lg:w-2/3 mx-auto flex flex-col gap-4 md:gap-10 my-4 md:my-8'>
           {children}
         </main>

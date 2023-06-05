@@ -17,7 +17,7 @@ export default function Skill({ value, styles }: { value: string, styles?: strin
     }
 
     return (
-        <div id={`${value}`} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className={`${activeGradient} flex items-center justify-center w-11/12 sm:w-1/3 lg:w-1/4 border-2 rounded-2xl border-[#555297] p-3 text-[#fdfaed] hover:border-[#EC994B] ${styles ? styles : ""}`}>
+        <div id={`${value}`} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className={`${activeGradient} flex items-center justify-center w-11/12 sm:w-1/3 lg:w-1/4 border-2 rounded-2xl border-borderPrimary p-3 hover:border-borderSecondary ${styles ? styles : ""}`}>
             <div className={`rounded-2xl text-center font-semibold  text-lg`}>
                 {value}
             </div>

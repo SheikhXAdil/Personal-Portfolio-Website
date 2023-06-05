@@ -7,7 +7,7 @@ import { techSkills, softSkills } from '../../../utils/constants'
 export default function Skills() {
     const [activeTab, setActiveTab] = useState("Soft");
     const [activeSkills, setActiveSkills] = useState("Soft");
-    const activeBgColor = "text-[#EC994B]"
+    const activeBgColor = "text-fontSecondary"
     const setBg = (active: string) => (activeTab === active ? activeBgColor : "bg-transparent");
 
     return (
@@ -21,7 +21,7 @@ export default function Skills() {
                             <button
                                 key={tab}
                                 type='button'
-                                className={`border-2 rounded-2xl px-1 py-2 w-1/2 md:w-1/5 text-center border-[#555297] font-semibold text-2xl ${setBg(tab)}`}
+                                className={`border-2 rounded-2xl px-1 py-2 w-1/2 md:w-1/5 text-center border-borderPrimary font-semibold text-2xl ${setBg(tab)}`}
                                 onClick={() => {
                                     setActiveTab(tab)
                                     setActiveSkills(tab)
