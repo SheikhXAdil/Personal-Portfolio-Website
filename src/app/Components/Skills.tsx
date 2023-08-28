@@ -5,8 +5,8 @@ import Skill from './Skill'
 import { techSkills, softSkills } from '../../../utils/constants'
 
 export default function Skills() {
-    const [activeTab, setActiveTab] = useState("Soft");
-    const [activeSkills, setActiveSkills] = useState("Soft");
+    const [activeTab, setActiveTab] = useState("Tech");
+    const [activeSkills, setActiveSkills] = useState("Tech");
     const activeBgColor = "text-fontSecondary"
     const setBg = (active: string) => (activeTab === active ? activeBgColor : "bg-transparent");
 

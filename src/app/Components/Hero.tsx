@@ -12,8 +12,8 @@ export default function Hero() {
             link: "#Contact"
         },
         {
-            text: "Download CV",
-            link: "/CV.pdf"
+            text: "Download Resume",
+            link: "/resume.pdf"
         }
     ]
 
