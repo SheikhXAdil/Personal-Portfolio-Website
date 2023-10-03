@@ -31,7 +31,7 @@ export default function Hero() {
 
                         <ul className='flex flex-wrap w-full mx-auto my-4 gap-4'>
                             <li ><Link href={buttons[0].link}><HeroButtons value={buttons[0].text} styles='cursor-pointer' /></Link></li>
-                            <li ><Link download href={buttons[1].link}><HeroButtons value={buttons[1].text} styles='cursor-pointer' /></Link></li>
+                            <li ><a download href={buttons[1].link}><HeroButtons value={buttons[1].text} styles='cursor-pointer' /></a></li>
                         </ul>
                     </div>
                 </div>
