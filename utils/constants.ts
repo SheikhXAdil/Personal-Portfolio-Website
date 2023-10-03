@@ -11,6 +11,9 @@ export const techSkills = [
     "Stripe",
     "SQL",
     "API Integration",
+    "Python",
+    "Gen AI",
+    "LangChain"
 ]
 
 export const softSkills = [
