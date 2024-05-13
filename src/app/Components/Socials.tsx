@@ -11,7 +11,7 @@ const socials = [
     },
     {
         icon: faLinkedin,
-        link: "https://www.linkedin.com/in/adil-nadeem-8b7061253"
+        link: "https://www.linkedin.com/in/sheikhxadil/"
     },
     {
         icon: faTwitter,
