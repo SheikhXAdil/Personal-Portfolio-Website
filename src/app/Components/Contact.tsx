@@ -70,6 +70,7 @@ export default function Contact() {
             form.reset()
         } catch (error) {
             console.error(error)
+        
             notifyError()
         } finally {
             setIsSending(false)
@@ -86,26 +87,26 @@ export default function Contact() {
 
                     {/* Left */}
                     <div>
-<h2 className="
-    max-w-md
-    text-4xl
-    sm:text-5xl
-    lg:text-5xl
-    xl:text-6xl
-    font-bold
-    leading-[1.05]
-    tracking-tight
-    text-fontPrimary
-">
-    <span className="block">
-        Let&apos;s build
-    </span>
+                        <h2 className="
+                            max-w-md
+                            text-4xl
+                            sm:text-5xl
+                            lg:text-5xl
+                            xl:text-6xl
+                            font-bold
+                            leading-[1.05]
+                            tracking-tight
+                            text-fontPrimary
+                        ">
+                            <span className="block">
+                                Let&apos;s build
+                            </span>
 
-    <TypingText
-        title="something useful."
-        textStyle="text-accentPrimary"
-    />
-</h2>
+                            <TypingText
+                                title="something useful."
+                                textStyle="text-accentPrimary"
+                            />
+                        </h2>
 
                         <p className="
                             mt-6

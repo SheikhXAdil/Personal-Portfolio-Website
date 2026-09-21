@@ -58,16 +58,16 @@ export default function Hero() {
                                 tracking-[0.18em]
                                 text-accentPrimary
                             ">
-                                BACKEND • SYSTEMS • INTELLIGENCE
+                                BACKEND • ARCHITECTURE • INTELLIGENCE
                             </span>
                         </div>
 
                         {/* Name */}
                         <h1 className="
-                            text-4xl
-                            sm:text-5xl
-                            md:text-6xl
-                            lg:text-7xl
+                            text-3xl
+                            sm:text-4xl
+                            md:text-5xl
+                            lg:text-6xl
                             font-bold
                             leading-[1.05]
                             tracking-tight
@@ -85,7 +85,7 @@ export default function Hero() {
                             font-semibold
                         ">
                             <TypingText
-                                title="Backend Systems"
+                                title="Backend Engineer"
                                 textStyle="text-accentPrimary"
                             />
                         </div>
