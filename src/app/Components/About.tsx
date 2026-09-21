@@ -67,52 +67,56 @@ export default function About() {
                                 text-fontSecondary
                             ">
                                 <p>
-                                    Hi, I&apos;m Adil! I&apos;m a back-end-focused
-                                    Software Engineer with expertise in designing
-                                    and building reliable, scalable back-end and
-                                    server-side solutions.
+                                    Hi, I&apos;m Adil! I&apos;m a{' '}
+                                    <span className="font-semibold text-accentPrimary">
+                                        back-end-focused Software Engineer
+                                    </span>{' '}
+                                    with experience designing and building reliable, scalable back-end and
+                                    server-side solutions. My experience includes{' '}
+                                    <span className="font-semibold text-accentPrimary">NodeJS</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">NestJS</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">Python</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">FastAPI</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">.NET</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">PostgreSQL</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">REST APIs</span>, and
+                                    relational databases, with a focus on{' '}
+                                    <span className="font-semibold text-accentPrimary">
+                                        back-end architecture
+                                    </span>
+                                    , API development, database design, and maintainable production-grade
+                                    software. I&apos;ve also gained nearly{' '}
+                                    <span className="font-semibold text-accentPrimary">2 years</span> of
+                                    experience through software engineering and AI-focused internships,
+                                    working on practical development and research-oriented projects.
                                 </p>
 
                                 <p className="mt-6">
-                                    My experience includes working with NodeJS,
-                                    NestJS, Python, FastAPI, .NET, PostgreSQL,
-                                    REST APIs, and relational databases, with a
-                                    focus on back-end architecture, API
-                                    development, database design, and writing
-                                    maintainable production-grade software. I
-                                    have also gained nearly 2 years of experience
-                                    through software engineering and AI-focused
-                                    internships, working on practical development
-                                    and research-oriented projects.
-                                </p>
-
-                                <p className="mt-6">
-                                    Alongside back-end development, I have a
-                                    strong interest in Artificial Intelligence
-                                    and its practical integration into software
-                                    systems. I have worked with LLMs, AI agents,
-                                    RAG, vector databases, and AI APIs, as well as
-                                    explored computer vision and Edge AI through
-                                    hands-on projects.
-                                </p>
-
-                                <p className="mt-6">
-                                    I enjoy understanding how systems work,
-                                    solving engineering problems, and learning
-                                    technologies that help me build better
-                                    software. I approach my work with a focus on
-                                    problem-solving, continuous learning, and
-                                    collaboration. I value clear communication,
-                                    teamwork, adaptability, and taking ownership
-                                    of my responsibilities.
-                                </p>
-
-                                <p className="mt-6">
-                                    My primary goal is to continue growing as a
-                                    back-end engineer and system architect, while
-                                    expanding my ability to incorporate AI and
-                                    other emerging technologies into back-end
-                                    applications where they provide real value.
+                                    Alongside back-end development, I have a strong interest in{' '}
+                                    <span className="font-semibold text-accentPrimary">
+                                        Artificial Intelligence
+                                    </span>{' '}
+                                    and its practical integration into software systems. I have worked with{' '}
+                                    <span className="font-semibold text-accentPrimary">LLMs</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">AI agents</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">RAG</span>,{' '}
+                                    <span className="font-semibold text-accentPrimary">
+                                        vector databases
+                                    </span>
+                                    , and AI APIs, while exploring{' '}
+                                    <span className="font-semibold text-accentPrimary">
+                                        computer vision
+                                    </span>{' '}
+                                    and{' '}
+                                    <span className="font-semibold text-accentPrimary">Edge AI</span>{' '}
+                                    through hands-on projects. I enjoy understanding how systems work,
+                                    solving engineering problems, and continuously learning technologies
+                                    that help me build better software. My goal is to grow as a{' '}
+                                    <span className="font-semibold text-accentPrimary">
+                                        back-end engineer and system architect
+                                    </span>{' '}
+                                    while incorporating AI and emerging technologies where they provide real
+                                    value.
                                 </p>
                             </div>
                         </div>
