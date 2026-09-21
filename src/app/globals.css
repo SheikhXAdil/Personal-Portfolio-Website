@@ -10,8 +10,6 @@
 }
 
 :root :focus {
-    /* outline-color: #0D9488;
-    outline-style: solid; */
     outline: none;
 }
 
