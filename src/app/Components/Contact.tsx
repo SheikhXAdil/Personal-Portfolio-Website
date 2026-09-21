@@ -70,7 +70,7 @@ export default function Contact() {
             form.reset()
         } catch (error) {
             console.error(error)
-        
+
             notifyError()
         } finally {
             setIsSending(false)
@@ -78,7 +78,7 @@ export default function Contact() {
     }
 
     return (
-        <section id="Contact" className="mt-24 lg:mt-32 px-6 lg:px-8">
+        <section id="Contact" className="my-8 px-6 lg:px-8">
             <div className="w-full max-w-7xl mx-auto">
 
                 <SectionLabel number="08" title="CONTACT" />
