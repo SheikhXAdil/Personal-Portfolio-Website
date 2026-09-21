@@ -1,23 +1,123 @@
-import { TitleText } from './CustomTexts'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMicrochip, faGlobe } from '@fortawesome/free-solid-svg-icons'
-
-
-
+import { TypingText } from './CustomTexts'
+import SectionLabel from './SectionLabel'
 
 export default function About() {
     return (
-        <section id='About'>
-            <div className="my-12 px-8">
-                <TitleText title='About Me' textStyle='text-center' />
-                <div className='w-full mt-4 lg:mt-10 flex flex-col md:flex-row justify-between items-start gap-6'>
-                    <p className='text-sm sm:text-base w-full lg:w-2/3 font-semibold mt-2 md:mt-0'>
-                        <span><FontAwesomeIcon icon={faGlobe} className='w-4 h-4 group-hover:text-bgTertiary text-fontSecondary inline mb-1 mr-1' /></span> I&apos;m a full stack NextJs developer curious to learn more about emerging web development technologies. My goal is to create beautiful and functional websites that exceed your expectations. As a proficient Next.js developer, I also have knowledge of TypeScript, Reacts, SQL Databases such as PostgreSQL ORMs such as Drizzle, API development, Content Management Systems such as Sanity and Contentful, Payment Getaways such as Stripe and contemporary CSS technologies like Tailwind and Shadcn-UI. I can also seamlessly work with Large Language models and LangChain to integrate latest and advance AI technologies in your applications.
+        <section id="About">
+            <div className="my-8 px-6 lg:px-8">
+                <div className="w-full max-w-7xl mx-auto">
 
-                    </p>
-                    <p className='text-sm sm:text-base w-full lg:w-2/3 font-semibold mt-8 md:mt-0'>
-                        <span><FontAwesomeIcon icon={faMicrochip} className='w-4 h-4 group-hover:text-bgTertiary text-fontSecondary inline mb-1 mr-1' /></span>I&apos;m not only a skilled engineer, but also a vital team member, with outstanding communication and team management skills. My dedication and attention to detail in project management are matched by my love for developing dynamic, responsive web apps. I can smoothly combine technical expertise and creative vision to produce high-quality web development projects because I have a great eye for design and a dedication to teamwork. I am a tech enthusiast with a keen interest in computers and programming. I love learning new technologies and solving problems. I&apos;m enrolled in a course on Gen AI, Web 3.0 and the Metaverse to get ready for the next generation of the internet, when artificial intelligence, decentralized technology and virtual worlds will have a stronger influence on how we communicate, work, and live online.
-                    </p>
+                    <SectionLabel
+                        number="01"
+                        title="ABOUT"
+                    />
+
+                    <div className="
+                        grid
+                        lg:grid-cols-[1fr_2fr]
+                        gap-10
+                        lg:gap-20
+                    ">
+
+                        {/* Main highlight */}
+                        <div>
+                            <h2 className="
+                                text-3xl
+                                sm:text-4xl
+                                lg:text-5xl
+                                font-bold
+                                leading-[1.1]
+                                tracking-tight
+                                text-fontPrimary
+                            ">
+                                Building beyond
+                                <span className="block">
+                                    <TypingText
+                                        title="the backend."
+                                        textStyle="text-accentPrimary"
+                                    />
+                                </span>
+                            </h2>
+
+                            <p className="
+                                mt-5
+                                max-w-xs
+                                text-sm
+                                leading-relaxed
+                                text-fontSecondary
+                            ">
+                                Thinking in terms of architecture, scalability,
+                                reliability, and the systems behind them.
+                            </p>
+                        </div>
+
+                        {/* About content */}
+                        <div className="
+                            border-l
+                            border-borderPrimary
+                            pl-6
+                            sm:pl-8
+                            lg:pl-10
+                        ">
+                            <div className="
+                                text-sm
+                                sm:text-base
+                                lg:text-lg
+                                leading-[1.9]
+                                text-fontSecondary
+                            ">
+                                <p>
+                                    Hi, I&apos;m Adil! I&apos;m a back-end-focused
+                                    Software Engineer with expertise in designing
+                                    and building reliable, scalable back-end and
+                                    server-side solutions.
+                                </p>
+
+                                <p className="mt-6">
+                                    My experience includes working with NodeJS,
+                                    NestJS, Python, FastAPI, .NET, PostgreSQL,
+                                    REST APIs, and relational databases, with a
+                                    focus on back-end architecture, API
+                                    development, database design, and writing
+                                    maintainable production-grade software. I
+                                    have also gained nearly 2 years of experience
+                                    through software engineering and AI-focused
+                                    internships, working on practical development
+                                    and research-oriented projects.
+                                </p>
+
+                                <p className="mt-6">
+                                    Alongside back-end development, I have a
+                                    strong interest in Artificial Intelligence
+                                    and its practical integration into software
+                                    systems. I have worked with LLMs, AI agents,
+                                    RAG, vector databases, and AI APIs, as well as
+                                    explored computer vision and Edge AI through
+                                    hands-on projects.
+                                </p>
+
+                                <p className="mt-6">
+                                    I enjoy understanding how systems work,
+                                    solving engineering problems, and learning
+                                    technologies that help me build better
+                                    software. I approach my work with a focus on
+                                    problem-solving, continuous learning, and
+                                    collaboration. I value clear communication,
+                                    teamwork, adaptability, and taking ownership
+                                    of my responsibilities.
+                                </p>
+
+                                <p className="mt-6">
+                                    My primary goal is to continue growing as a
+                                    back-end engineer and system architect, while
+                                    expanding my ability to incorporate AI and
+                                    other emerging technologies into back-end
+                                    applications where they provide real value.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>

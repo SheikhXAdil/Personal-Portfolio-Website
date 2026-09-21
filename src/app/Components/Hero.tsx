@@ -58,7 +58,7 @@ export default function Hero() {
                                 tracking-[0.18em]
                                 text-accentPrimary
                             ">
-                                BACKEND • AI/ML
+                                BACKEND • SYSTEMS • INTELLIGENCE
                             </span>
                         </div>
 

@@ -1,53 +1,70 @@
-'use client'
-import { useState } from 'react'
-import { TitleText } from './CustomTexts'
-import Skill from './Skill'
-import { techSkills, softSkills } from '../../../utils/constants'
+import { skillGroups } from '../../../utils/constants'
+import SectionLabel from './SectionLabel'
 
 export default function Skills() {
-    const [activeTab, setActiveTab] = useState("Tech");
-    const [activeSkills, setActiveSkills] = useState("Tech");
-    const activeBgColor = "text-fontSecondary"
-    const setBg = (active: string) => (activeTab === active ? activeBgColor : "bg-transparent");
-
     return (
-        <section id='Skills'>
-            <div className="mt-8 px-8">
-                <TitleText title='Skills' textStyle='text-center' />
-                <div className='my-4'>
+        <section id="Skills">
+            <div className="my-8 px-6 lg:px-8">
+                <div className="w-full max-w-7xl mx-auto">
 
-                    <div className='flex gap-4'>
-                        {["Soft", "Tech"].map((tab) => (
-                            <button
-                                key={tab}
-                                type='button'
-                                className={`border-2 rounded-2xl px-1 py-2 w-1/2 md:w-1/5 text-center border-borderPrimary font-semibold text-2xl ${setBg(tab)}`}
-                                onClick={() => {
-                                    setActiveTab(tab)
-                                    setActiveSkills(tab)
-                                }}
+                    <SectionLabel
+                        number="06"
+                        title="SKILLS"
+                    />
+
+                    <div className="border-t border-borderPrimary">
+
+                        {skillGroups.map((group) => (
+                            <div
+                                key={group.title}
+                                className="
+                                    grid
+                                    md:grid-cols-[180px_1fr]
+                                    gap-6
+                                    md:gap-10
+                                    py-7
+                                    border-b
+                                    border-borderPrimary
+                                "
                             >
-                                {tab} Skills
-                            </button>
+                                <h3 className="
+                                    text-sm
+                                    sm:text-base
+                                    font-semibold
+                                    uppercase
+                                    tracking-[0.15em]
+                                    text-accentPrimary
+                                ">
+                                    {group.title}
+                                </h3>
+
+                                <div className="
+                                    flex
+                                    flex-wrap
+                                    gap-x-6
+                                    gap-y-3
+                                ">
+                                    {group.skills.map((skill) => (
+                                        <span
+                                            key={skill}
+                                            className="
+                                                text-base
+                                                sm:text-lg
+                                                text-fontPrimary
+                                                transition-colors
+                                                duration-200
+                                                hover:text-accentPrimary
+                                            "
+                                        >
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
+
                     </div>
 
-                    {activeSkills === "Soft" ?
-                        <div className="flex flex-wrap w-full my-8 gap-4 justify-around">
-                            {softSkills.map((skill, index) => {
-                                return (
-                                    <Skill key={index} value={skill} />
-                                )
-                            })}
-                        </div> :
-                        <div className="flex flex-wrap w-full my-8 gap-4 justify-around">
-                            {techSkills.map((skill, index) => {
-                                return (
-                                    <Skill key={index} value={skill} />
-                                )
-                            })}
-                        </div>
-                    }
                 </div>
             </div>
         </section>

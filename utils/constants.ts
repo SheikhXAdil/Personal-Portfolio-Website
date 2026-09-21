@@ -1,29 +1,38 @@
-export const techSkills = [
-    "Typescript",
-    "HTML",
-    "Tailwind CSS",
-    "Shadcn UI",
-    "NextJs",
-    "ReactJs",
-    "Drizzle ORM",
-    "Cloudinary",
-    "Sanity CMS",
-    "Stripe",
-    "SQL",
-    "API Integration",
-    "Python",
-    "Gen AI",
-    "LangChain"
-]
-
-export const softSkills = [
-    "Communication",
-    "Teamwork",
-    "Leadership",
-    "Problem-solving",
-    "Time management",
-    "Critical thinking",
-    "Adaptability",
+export const skillGroups = [
+    {
+        title: 'Languages',
+        skills: ['Python', 'TypeScript', 'JavaScript', 'C#', 'SQL'],
+    },
+    {
+        title: 'Backend',
+        skills: [
+            'FastAPI',
+            'NestJS',
+            'Node.js',
+            'ASP.NET Core',
+            'REST APIs',
+            'PostgreSQL',
+            'TypeORM',
+            'Docker',
+        ],
+    },
+    {
+        title: 'AI / ML',
+        skills: [
+            'Machine Learning',
+            'Deep Learning',
+            'Computer Vision',
+            'RAG',
+            'LangChain',
+            'LLMs',
+            'OpenAI',
+            'Gemini',
+        ],
+    },
+    {
+        title: 'Tools',
+        skills: ['Git', 'GitHub', 'Linux'],
+    },
 ]
 
 export type project = {
