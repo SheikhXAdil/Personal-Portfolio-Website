@@ -10,21 +10,27 @@
 }
 
 :root :focus {
-    outline-color: #EC994B;
-    outline-style: solid;
+    /* outline-color: #0D9488;
+    outline-style: solid; */
+    outline: none;
 }
 
+/* Skill gradient */
 .skill-gradient {
-    background: linear-gradient(to right, rgb(252, 74, 26), rgb(255, 164, 60));
+    background: linear-gradient(
+        to right,
+        #0D9488,
+        #115E59
+    );
 }
 
 /* ===== Scrollbar CSS ===== */
+
 /* Firefox */
 * {
     scrollbar-width: auto;
-    scrollbar-color: rgb(255, 164, 60) #ffffff;
+    scrollbar-color: #0D9488 #EDEFF1;
 }
-
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -32,10 +38,14 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #292750;
+    background: #E1E5E8;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #ec994b;
+    background-color: #0D9488;
     border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #115E59;
 }

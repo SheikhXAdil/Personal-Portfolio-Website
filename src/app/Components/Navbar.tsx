@@ -1,40 +1,225 @@
 "use client"
+
 import Image from "next/image"
-import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { useState } from "react";
+import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark, faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
 
 export default function Navbar() {
-    let [hidden, setHidden] = useState(true)
-    let [active, setActive] = useState(true)
+    const [hidden, setHidden] = useState(true)
+    const [active, setActive] = useState(true)
+    const [moreOpen, setMoreOpen] = useState(false)
 
     function handleNavbar() {
         setHidden(!hidden)
         setActive(!active)
+        setMoreOpen(false)
     }
-    const navs: string[] = ["Home", "About", "Skills", "Projects", "Contact"]
+
+    function closeMobileMenu() {
+        setHidden(true)
+        setActive(true)
+        setMoreOpen(false)
+    }
+
+    const mainNavs = [
+        { name: "Home", href: "#Home" },
+        { name: "About", href: "#About" },
+        { name: "Experience", href: "#Experience" },
+        { name: "Projects", href: "#Projects" },
+    ]
+
+    const moreNavs = [
+        { name: "Interests", href: "#Interests" },
+        { name: "Education", href: "#Education" },
+        { name: "Skills", href: "#Skills" },
+        { name: "Certifications & Achievements", href: "#Certifications" },
+        { name: "Contact", href: "#Contact" },
+    ]
 
     return (
-        <div className='fixed top-0 left-0 w-full mb-60 flex flex-col md:flex-row justify-between bg-bgPrimary z-20'>
-            <div className="flex justify-between">
-                <div className="mx-6 my-4">
-                    <Link href="/" className="text-xl md:text-2xl font-bold focus:outline-none">Muhammad Adil Nadeem</Link>
-                </div>
-                <button className="px-2 md:px-6 block md:hidden active:outline-none focus:outline-none" onClick={handleNavbar}>
-                    {active ? <Image src={"/menu.svg"} alt="menu" width={32} height={32} /> : <FontAwesomeIcon icon={faXmark} width={32} height={32} className="w-7 h-7 ml-5" />}
+        <div className="fixed top-0 left-0 w-full bg-bgPrimary z-20">
+
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-4 lg:px-8">
+
+                {/* Name */}
+                <Link
+                    href="/"
+                    className="text-lg lg:text-2xl font-bold focus:outline-none whitespace-nowrap"
+                >
+                    Muhammad Adil Nadeem
+                </Link>
+
+                {/* Mobile menu button */}
+                <button
+                    className="lg:hidden px-2 focus:outline-none"
+                    onClick={handleNavbar}
+                    aria-label={active ? "Open navigation menu" : "Close navigation menu"}
+                >
+                    {active ? (
+                        <Image
+                            src="/menu.svg"
+                            alt="menu"
+                            width={32}
+                            height={32}
+                        />
+                    ) : (
+                        <FontAwesomeIcon
+                            icon={faXmark}
+                            className="w-7 h-7 text-fontPrimary"
+                        />
+                    )}
                 </button>
+
+                {/* Desktop navigation */}
+                <div className="hidden lg:block">
+                    <ul className="flex items-center gap-2">
+
+                        {mainNavs.map((nav) => (
+                            <li
+                                key={nav.name}
+                                className="p-3 text-lg rounded-2xl font-medium hover:bg-bgTertiary hover:text-fontSecondary cursor-pointer"
+                            >
+                                <Link
+                                    href={nav.href}
+                                    className="focus:outline-none"
+                                >
+                                    {nav.name}
+                                </Link>
+                            </li>
+                        ))}
+
+                        {/* More */}
+                        <li className="relative p-3 text-lg rounded-2xl font-medium hover:bg-bgTertiary hover:text-fontSecondary cursor-pointer">
+                            <button
+                                onClick={() => setMoreOpen(!moreOpen)}
+                                className="flex items-center gap-2 focus:outline-none"
+                            >
+                                More
+
+                                <FontAwesomeIcon
+                                    icon={faChevronDown}
+                                    className={`w-3 h-3 transition-transform ${
+                                        moreOpen ? "rotate-180" : ""
+                                    }`}
+                                />
+                            </button>
+
+                            {moreOpen && (
+                                <ul className="absolute right-0 top-full mt-2 w-64 bg-bgSecondary rounded-xl shadow-lg overflow-hidden border border-borderPrimary">
+                                    {moreNavs.map((nav) => (
+                                        <li
+                                            key={nav.name}
+                                            className="py-3 px-4 text-base font-medium hover:bg-bgTertiary hover:text-fontSecondary"
+                                        >
+                                            <Link
+                                                href={nav.href}
+                                                className="block focus:outline-none"
+                                                onClick={() => setMoreOpen(false)}
+                                            >
+                                                {nav.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+
+                        {/* Resume */}
+                        <li className="p-3 text-lg rounded-2xl font-medium hover:bg-bgTertiary hover:text-fontSecondary cursor-pointer">
+                            <a
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="focus:outline-none"
+                            >
+                                Resume
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
 
-            <div id="navbar" className={`${hidden ? "hidden" : ""} md:m-6 bg-bgTertiary md:bg-bgPrimary md:my-0 md:block`}>
-                <ul id="navbar" className='md:mx-0 list-none w-full md:w-auto text-center md:text-start flex flex-col md:flex-row md:justify-between md:gap-6'>
-                    {navs.map((nav, index) => {
-                        return (
-                            <li key={index} className='py-4 md:my-0 p-3 text-lg md:rounded-2xl font-medium hover:bg-bgPrimary hover:text-fontSecondary cursor-pointer '>
-                                <Link href={`#${nav}`} className="active:outline-none">{nav}</Link>
-                            </li>
-                        )
-                    })}
+            {/* Mobile navigation */}
+            <div
+                className={`
+                    ${hidden ? "hidden" : "block"}
+                    lg:hidden
+                    bg-bgTertiary
+                    max-h-[calc(100dvh-72px)]
+                    overflow-y-auto
+                    overscroll-contain
+                `}
+            >
+                <ul className="flex flex-col text-center">
+
+                    {mainNavs.map((nav) => (
+                        <li
+                            key={nav.name}
+                            className="py-4 px-3 text-lg font-medium hover:bg-bgPrimary hover:text-fontSecondary"
+                        >
+                            <Link
+                                href={nav.href}
+                                className="block focus:outline-none"
+                                onClick={closeMobileMenu}
+                            >
+                                {nav.name}
+                            </Link>
+                        </li>
+                    ))}
+
+                    {/* More */}
+                    <li className="py-4 px-3 text-lg font-medium">
+                        <button
+                            onClick={() => setMoreOpen(!moreOpen)}
+                            className="flex items-center justify-center gap-2 w-full focus:outline-none"
+                        >
+                            More
+
+                            <FontAwesomeIcon
+                                icon={faChevronDown}
+                                className={`w-3 h-3 transition-transform ${
+                                    moreOpen ? "rotate-180" : ""
+                                }`}
+                            />
+                        </button>
+
+                        {moreOpen && (
+                            <ul className="mt-2 max-h-[45vh] overflow-y-auto overscroll-contain bg-bgPrimary">
+                                {moreNavs.map((nav) => (
+                                    <li
+                                        key={nav.name}
+                                        className="py-3 px-4 text-base hover:bg-bgTertiary hover:text-fontSecondary"
+                                    >
+                                        <Link
+                                            href={nav.href}
+                                            className="block focus:outline-none"
+                                            onClick={closeMobileMenu}
+                                        >
+                                            {nav.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+
+                    {/* Resume */}
+                    <li className="py-4 px-3 text-lg font-medium hover:bg-bgPrimary hover:text-fontSecondary">
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="focus:outline-none"
+                            onClick={closeMobileMenu}
+                        >
+                            Resume
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
