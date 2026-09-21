@@ -39,16 +39,3 @@ module.exports = {
 //   "borderSecondary": "#EC994B",
 //   "linkHoverColor": "#a39ef0"
 // },
-
-// {
-//       "bgPrimary": "#EDEFF1",
-//       "bgSecondary": "#FFFFFF",
-//       "bgTertiary": "#E1E5E8",
-//       "fontPrimary": "#172033",
-//       "fontSecondary": "#64748B",
-//       "borderPrimary": "#CBD1D6",
-//       "borderSecondary": "#0F766E",
-//       "linkHoverColor": "#0D9488",
-//       "accentPrimary": "#0D9488",
-//       "accentSecondary": "#115E59"
-//     },
