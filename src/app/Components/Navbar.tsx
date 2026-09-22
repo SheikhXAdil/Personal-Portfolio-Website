@@ -23,6 +23,33 @@ export default function Navbar() {
         setMoreOpen(false)
     }
 
+    function scrollToSection(
+        e: React.MouseEvent<HTMLAnchorElement>,
+        href: string
+    ) {
+        e.preventDefault()
+
+        const id = href.replace("#", "")
+        const element = document.getElementById(id)
+
+        if (!element) return
+
+        const navbarHeight = 72
+        const extraSpacing = 16
+
+        const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY
+
+        window.scrollTo({
+            top: elementPosition - navbarHeight - extraSpacing,
+            behavior: "smooth",
+        })
+
+        window.history.pushState(null, "", href)
+
+        closeMobileMenu()
+    }
+
     const mainNavs = [
         { name: "Home", href: "#Home" },
         { name: "About", href: "#About" },
@@ -35,8 +62,12 @@ export default function Navbar() {
         { name: "Education", href: "#Education" },
         { name: "Skills", href: "#Skills" },
         { name: "Certifications & Achievements", href: "#Certifications" },
-        { name: "Contact", href: "#Contact" },
     ]
+
+    const contactNav = {
+        name: "Contact",
+        href: "#Contact",
+    }
 
     return (
         <div className="fixed top-0 left-0 w-full bg-bgPrimary z-20">
@@ -56,7 +87,11 @@ export default function Navbar() {
                 <button
                     className="lg:hidden px-2 focus:outline-none"
                     onClick={handleNavbar}
-                    aria-label={active ? "Open navigation menu" : "Close navigation menu"}
+                    aria-label={
+                        active
+                            ? "Open navigation menu"
+                            : "Close navigation menu"
+                    }
                 >
                     {active ? (
                         <Image
@@ -77,17 +112,21 @@ export default function Navbar() {
                 <div className="hidden lg:block">
                     <ul className="flex items-center gap-2">
 
+                        {/* Main navigation */}
                         {mainNavs.map((nav) => (
                             <li
                                 key={nav.name}
                                 className="p-3 text-lg rounded-2xl font-medium hover:bg-bgTertiary hover:text-fontSecondary cursor-pointer"
                             >
-                                <Link
+                                <a
                                     href={nav.href}
+                                    onClick={(e) =>
+                                        scrollToSection(e, nav.href)
+                                    }
                                     className="focus:outline-none"
                                 >
                                     {nav.name}
-                                </Link>
+                                </a>
                             </li>
                         ))}
 
@@ -114,28 +153,37 @@ export default function Navbar() {
                                             key={nav.name}
                                             className="py-3 px-4 text-base font-medium hover:bg-bgTertiary hover:text-fontSecondary"
                                         >
-                                            <Link
+                                            <a
                                                 href={nav.href}
                                                 className="block focus:outline-none"
-                                                onClick={() => setMoreOpen(false)}
+                                                onClick={(e) =>
+                                                    scrollToSection(
+                                                        e,
+                                                        nav.href
+                                                    )
+                                                }
                                             >
                                                 {nav.name}
-                                            </Link>
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>
                             )}
                         </li>
 
-                        {/* Resume */}
+                        {/* Contact */}
                         <li className="p-3 text-lg rounded-2xl font-medium hover:bg-bgTertiary hover:text-fontSecondary cursor-pointer">
                             <a
-                                href="/resume.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href={contactNav.href}
+                                onClick={(e) =>
+                                    scrollToSection(
+                                        e,
+                                        contactNav.href
+                                    )
+                                }
                                 className="focus:outline-none"
                             >
-                                Resume
+                                {contactNav.name}
                             </a>
                         </li>
 
@@ -156,18 +204,21 @@ export default function Navbar() {
             >
                 <ul className="flex flex-col text-center">
 
+                    {/* Main navigation */}
                     {mainNavs.map((nav) => (
                         <li
                             key={nav.name}
                             className="py-4 px-3 text-lg font-medium hover:bg-bgPrimary hover:text-fontSecondary"
                         >
-                            <Link
+                            <a
                                 href={nav.href}
                                 className="block focus:outline-none"
-                                onClick={closeMobileMenu}
+                                onClick={(e) =>
+                                    scrollToSection(e, nav.href)
+                                }
                             >
                                 {nav.name}
-                            </Link>
+                            </a>
                         </li>
                     ))}
 
@@ -194,29 +245,37 @@ export default function Navbar() {
                                         key={nav.name}
                                         className="py-3 px-4 text-base hover:bg-bgTertiary hover:text-fontSecondary"
                                     >
-                                        <Link
+                                        <a
                                             href={nav.href}
                                             className="block focus:outline-none"
-                                            onClick={closeMobileMenu}
+                                            onClick={(e) =>
+                                                scrollToSection(
+                                                    e,
+                                                    nav.href
+                                                )
+                                            }
                                         >
                                             {nav.name}
-                                        </Link>
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
                         )}
                     </li>
 
-                    {/* Resume */}
+                    {/* Contact */}
                     <li className="py-4 px-3 text-lg font-medium hover:bg-bgPrimary hover:text-fontSecondary">
                         <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="focus:outline-none"
-                            onClick={closeMobileMenu}
+                            href={contactNav.href}
+                            className="block focus:outline-none"
+                            onClick={(e) =>
+                                scrollToSection(
+                                    e,
+                                    contactNav.href
+                                )
+                            }
                         >
-                            Resume
+                            {contactNav.name}
                         </a>
                     </li>
 
