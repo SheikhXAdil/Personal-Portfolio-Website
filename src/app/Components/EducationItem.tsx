@@ -1,5 +1,5 @@
 import React from 'react'
-import { educationItems } from '../../../utils/data'
+import { education } from '../../../utils/types'
 
 type EducationItemProps = {
     education: education
