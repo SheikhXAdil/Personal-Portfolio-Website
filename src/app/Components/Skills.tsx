@@ -1,4 +1,4 @@
-import { skillGroups } from '../../../utils/constants'
+import { skillGroups } from '../../../utils/data'
 import SectionLabel from './SectionLabel'
 
 export default function Skills() {

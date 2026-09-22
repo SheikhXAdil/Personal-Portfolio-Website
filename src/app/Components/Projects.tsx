@@ -1,5 +1,5 @@
 import React from 'react'
-import { projects } from '../../../utils/constants'
+import { projects } from '../../../utils/data'
 import Project from './Project'
 import SectionLabel from './SectionLabel'
 
