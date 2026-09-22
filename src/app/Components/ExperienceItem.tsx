@@ -1,5 +1,5 @@
 import React from 'react'
-import { experience } from '../../../utils/data'
+import { experience } from '../../../utils/types'
 
 type ExperienceItemProps = {
     experience: experience

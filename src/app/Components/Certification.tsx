@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { certification } from '../../../utils/data'
+import { certification } from '../../../utils/types'
 
 type CertificationProps = {
     certification: certification

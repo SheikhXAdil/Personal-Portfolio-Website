@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { achievement } from '../../../utils/data'
+import { achievement } from '../../../utils/types'
 
 type AchievementProps = {
     achievement: achievement

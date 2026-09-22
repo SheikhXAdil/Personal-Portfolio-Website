@@ -1,5 +1,5 @@
 import React from 'react'
-import { interest } from '../../../utils/data'
+import { interest } from '../../../utils/types'
 
 type InterestProps = {
     interest: interest
