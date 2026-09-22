@@ -5,8 +5,10 @@ export type skillGroup = {
 
 export type project = {
     title: string
-    gitRepoText?: string
-    gitRepoLink?: string
+    gitRepoText?: string | null
+    gitRepoLink?: string | null
+    siteText?: string | null
+    siteLink?: string | null
     img?: string | null
     desc: string
     techStack: string[]
@@ -14,13 +16,13 @@ export type project = {
 
 export type interest = {
     title: string
-    description?: string
+    description?: string | null
 }
 
 export type education = {
     degree: string
     institution: string
-    department?: string
+    department?: string | null
     duration: string
     cgpa?: string
 }
@@ -28,17 +30,17 @@ export type education = {
 export type certification = {
     title: string
     issuer: string
-    date?: string
+    date?: string | null
     image?: string | null
-    link?: string
+    link?: string | null
 }
 
 export type achievement = {
     title: string
-    description?: string
-    date?: string
+    description?: string | null
+    date?: string | null
     image?: string | null
-    link?: string
+    link?: string | null
 }
 
 export type experience = {
@@ -49,6 +51,6 @@ export type experience = {
     workMode: string
     description: string
     startDate: string
-    endDate?: string
+    endDate?: string | null
     duration: string
 }
